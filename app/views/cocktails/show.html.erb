@@ -5,9 +5,9 @@
       <li class="list-group-item">
         <p>Description: <%= dose.description %></p>
         <p>Ingredients: <%= dose.ingredient.name %></p>
-        <button type="button" class="btn btn-success"><%= link_to "Delete dose", dose_path(dose), method: :delete, data: {confirm: "Are you sure?"} %></button>
+        <%= link_to "Delete dose", dose_path(dose), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
       </li>
     <% end %>
   <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
-  <button type="button" class="btn btn-info"><%= link_to "See all cocktails", cocktails_path %></button>
+  <%= link_to "See all cocktails", cocktails_path, class: "btn btn-info" %>
 </div>
